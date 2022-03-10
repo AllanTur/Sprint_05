@@ -1,15 +1,26 @@
 async function render() {
-  let response = await fetch("https://restcountries.com/v3.1/region/europe");
-  let x = await response.json();
-  let nomPays = "";
-  let count = 0;
-  //   console.log(x[0].name.official);
-  for (let a in x) {
-    console.log(count, +" : " + x[a].name.official);
-    nomPays += `<li>${x[a].name.official}</li>`;
-    count++;
+  try {
+    let response = await fetch("https://restcountries.com/v3.1/region/europe");
+    let x = await response.json();
+    let nomPays = "";
+
+    for (let a in x) {
+      nomPays += `<li>${x[a].name.official}</li>`;
+    }
+    document.getElementById("nom").innerHTML = nomPays;
+  } catch (e) {
+    console.error(e);
+    console.log("Dans le catch");
+
+    // btn.addEventListener("click", function () {
+    //   render();
+    // });
   }
-  document.getElementById("nom").innerHTML = nomPays;
 }
 
 render();
+// let btn = document.createElementById("refresh");
+// let txt = document.createTextNode("boutton raffraichir");
+// btn.appendChild(txt);
+// document.getElementById("refresh").textContent = "";
+// document.getElementById("refresh").appendChild(btn);
