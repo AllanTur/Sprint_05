@@ -10,4 +10,4 @@ https://allantur.github.io/Sprint_05/rest-countries/index.html
 https://www.figma.com/file/hzbtzBBZgciCIS6acm7PrC/Projet_Sprint_05?node-id=24%3A2701
 
 
-*** me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+
