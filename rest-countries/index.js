@@ -19,6 +19,20 @@ async function render() {
 }
 
 render();
+document.getElementById("refresh").style.color = "blue";
+// document.getElementById("refresh").style.background = "red";
+document.getElementById("refresh").style.border = "none";
+document.getElementById("refresh").style.borderRadius = "5px";
+document.getElementById("refresh").style.margin = "50px";
+document.getElementById("refresh").style.height = "50px";
+document.getElementById("refresh").style.width = "200px";
+function mouseDown() {
+  document.getElementById("refresh").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("refresh").style.color = "purple";
+}
 // let btn = document.createElementById("refresh");
 // let txt = document.createTextNode("boutton raffraichir");
 // btn.appendChild(txt);
