@@ -1,9 +1,9 @@
 async function render() {
   try {
+    // let response = await fetch("https://restcountries.com/v3.1/region/europe");
     let response = await fetch("https://restcountries.com/v3.1/region/europe");
     let x = await response.json();
     let nomPays = "";
-    let area = "";
 
     let internationalNumberFormat = new Intl.NumberFormat("en-US");
     for (let a in x) {
